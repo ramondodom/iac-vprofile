@@ -17,7 +17,7 @@ env:
  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}               
   # S3 bucket for the terraform state
- BUCKET_TERRAFORM_STATE: ${{ secrets.BUCKET_TF_STATE}}
+ BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE}}
   # region is not mandatory
  AWS_REGION: us-east-1
   # from the variables.tf file - not mandatory - can put in github also
@@ -40,7 +40,7 @@ jobs:
          uses: hashicorp/setup-terraform@v2 
          with:
            terraform_version: 1.6.3
-            
+
        - name: Terraform init
          id: init
          run: terraform init -backend-config="bucket=$BUCKET_TF_STATE" 
