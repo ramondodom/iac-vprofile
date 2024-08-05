@@ -23,8 +23,8 @@ env:
   # from the variables.tf file - not mandatory - can put in github also
  EKS_CLUSTER: vprofile-eks
 
- jobs:
-   terraform:
+jobs:
+terraform:
      name: Apply teraform code changes
      run-on: ubuntu-latest
      defaults:
