@@ -24,7 +24,7 @@ env:
  EKS_CLUSTER: vprofile-eks
 
 jobs:
-terraform:
+   terraform:
      name: Apply teraform code changes
      run-on: ubuntu-latest
      defaults:
